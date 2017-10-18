@@ -1,0 +1,10 @@
+com\pageobjectmodel\ddf\pages\SecurityPage.class
+com\pageobjectmodel\ddf\testcases\ChangePasswordTest.class
+com\pageobjectmodel\ddf\pages\SettingPage.class
+com\pageobjectmodel\ddf\pages\LaunchPage.class
+com\pageobjectmodel\ddf\testcases\LoginTest.class
+com\pageobjectmodel\ddf\pages\LoginPage.class
+com\pageobjectmodel\ddf\pages\HomePage.class
+com\pageobjectmodel\ddf\base\BasePage.class
+com\pageobjectmodel\ddf\common\TopMenu.class
+com\pageobjectmodel\ddf\base\BaseTest.class

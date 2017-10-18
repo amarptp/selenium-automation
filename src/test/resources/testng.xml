@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    
+    
+  <test name="Login_Test">
+    <classes>
+      <class name="com.pageobjectmodel.ddf.testcases.LoginTest"/>            
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="Profile_Test">
+    <classes>
+      <class name="com.pageobjectmodel.ddf.testcases.ProfileTest"/>            
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="FriendList_Test">
+    <classes>
+      <class name="com.pageobjectmodel.ddf.testcases.FriendListTest"/>            
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="ChangPassword_Test">
+    <classes>
+      <class name="com.pageobjectmodel.ddf.testcases.ChangePasswordTest"/>            
+    </classes>
+  </test> <!-- Test -->
+  
+  
+</suite> <!-- Suite -->

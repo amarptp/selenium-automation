@@ -1,0 +1,226 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.pageobjectmodel.ddf</groupId>
+  <artifactId>PageObjectModel</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>PageObjectModel</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+  <!--  POI  -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+		    <artifactId>poi</artifactId>
+		    <version>3.9</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+		    <artifactId>poi-ooxml</artifactId>
+		    <version>3.9</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+		    <artifactId>poi-ooxml-schemas</artifactId>
+		    <version>3.9</version>
+		</dependency>
+		<dependency>
+			<groupId>dom4j</groupId>
+		    <artifactId>dom4j</artifactId>
+		    <version>1.6.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.xmlbeans</groupId>
+		    <artifactId>xmlbeans</artifactId>
+		    <version>2.6.0</version>
+		</dependency>
+
+		<!--  SELENIUM  -->
+ 		<dependency>
+    		<groupId>org.seleniumhq.selenium</groupId>
+    		<artifactId>selenium-java</artifactId>
+    		<version>3.5.1</version>
+		</dependency>    		
+   		
+   		 
+		
+		<!--  EXTENT REPORT 3x  -->
+		<dependency>
+    		<groupId>com.aventstack</groupId>
+    		<artifactId>extentreports</artifactId>
+    		<version>3.0.7</version>
+		</dependency>
+		
+		<!--  TESTNG -->
+		<dependency>
+			<groupId>org.testng</groupId>
+    			<artifactId>testng</artifactId>
+    			<version>6.11</version>
+    			<scope>test</scope>
+			</dependency>
+
+		
+		<dependency>
+			<groupId>org.apache.maven.surefire</groupId>
+    		<artifactId>surefire-api</artifactId>
+    		<version>2.20.1</version>
+		</dependency>
+		
+		<!--  APPIUM -->		
+		<dependency>
+			<groupId>io.appium</groupId>
+    		<artifactId>java-client</artifactId>
+    		<version>5.0.3</version>
+		</dependency>
+		
+		
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+		    <artifactId>gson</artifactId>
+		    <version>2.8.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+		    <artifactId>httpclient</artifactId>
+		    <version>4.5.3</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+    		<artifactId>guava</artifactId>
+    		<version>23.0</version>
+		</dependency>
+		<dependency>
+			<groupId>cglib</groupId>
+		    <artifactId>cglib</artifactId>
+		    <version>3.2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-validator</groupId>
+		    <artifactId>commons-validator</artifactId>
+		    <version>1.6</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.mail</groupId>
+		    <artifactId>javax.mail-api</artifactId>
+		    <version>1.6.0</version>
+		</dependency>
+
+	</dependencies>
+	
+	
+	<build>
+        <plugins>            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                	<version>2.19.1</version>
+              			<configuration>
+		                 	<suiteXmlFiles>
+						    	<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+							</suiteXmlFiles>
+		                    <!-- Skip the normal tests, we'll run them in the integration-test phase -->
+		                    	  		       
+		      			</configuration>               
+            </plugin>
+            
+         <!--    
+         Post-Man plugin
+		 <plugin>
+			<groupId>ch.fortysix</groupId>
+			<artifactId>maven-postman-plugin</artifactId>
+			<executions>
+				<execution>
+				
+				<id>send a mail</id>
+				<phase>test</phase>
+				<goals>
+				<goal>send-mail</goal>
+				</goals>
+				<inherited>true</inherited>
+				
+				<configuration>
+					From Email address
+					<from>test@gmail.com</from>
+					
+					 Email subject
+					<subject>Test Automation Report</subject>
+					
+					Fail the build if the mail doesnt reach
+					<failonerror>true</failonerror>
+					
+					host
+					<mailhost>smtp.gmail.com</mailhost>
+					port of the host
+					<mailport>465</mailport>
+					<mailssl>true</mailssl>
+					<mailAltConfig>true</mailAltConfig>
+					
+					Email Authentication(USername and Password)
+					<mailuser>test@gmail.com</mailuser>
+					<mailpassword>test*123</mailpassword>
+					
+					<receivers>
+						To Email address
+						<receiver>test@gmail.com</receiver>
+					</receivers>
+					
+					<fileSets>
+					<fileSet>
+						Report directory Path
+						<directory>E://Selenium//Aug_2017//PageObjectModel//reports</directory>
+						<includes>
+							Report file name
+							<include>Mon_Oct_16_12_46_42_IST_2017.html</include>
+						</includes>
+						Use Regular Expressions like **/*.html if you want all the html files to send
+						</fileSet>
+					</fileSets>				
+				
+				</configuration>
+				</execution>
+			</executions>
+		</plugin>
+         -->    
+            
+            
+          </plugins>
+    </build>
+    
+    <reporting>
+    	<plugins>
+    	 	 
+    <!-- TestNG-xslt related configuration. -->
+      	<plugin>
+        	<groupId>org.reportyng</groupId>
+        	<artifactId>reporty-ng</artifactId>
+        	<version>1.2</version>
+        	<configuration>
+        	
+     <!-- Output directory for the testng xslt report -->
+          <outputdir>/target/testng-xslt-report</outputdir>
+          <sorttestcaselinks>true</sorttestcaselinks>
+          <testdetailsfilter>FAIL,SKIP,PASS,CONF,BY_CLASS</testdetailsfilter>
+          <showruntimetotals>true</showruntimetotals>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
+  
+ <pluginRepositories>
+    <pluginRepository>
+      <id>reporty-ng</id>
+      <url>https://github.com/cosminaru/reporty-ng/raw/master/dist/maven</url>
+    </pluginRepository>
+  </pluginRepositories>
+  
+</project>
+
+
+

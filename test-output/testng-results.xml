@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="32117" started-at="2017-10-17T11:21:50Z" finished-at="2017-10-17T11:22:22Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="32117" started-at="2017-10-17T11:21:50Z" finished-at="2017-10-17T11:22:22Z">
+      <class name="com.pageobjectmodel.ddf.testcases.LoginTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.pageobjectmodel.ddf.testcases.LoginTest@5c18298f]" name="init" is-config="true" duration-ms="8" started-at="2017-10-17T16:51:52Z" finished-at="2017-10-17T16:51:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="doLogin(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.pageobjectmodel.ddf.testcases.LoginTest@5c18298f]" name="doLogin" duration-ms="29274" started-at="2017-10-17T16:51:52Z" data-provider="getLoginData" finished-at="2017-10-17T16:52:21Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[rajani07aug@@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Virgo@2004]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Rajani Singh]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Positive]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doLogin -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.pageobjectmodel.ddf.testcases.LoginTest@5c18298f]" name="quit" is-config="true" duration-ms="1599" started-at="2017-10-17T16:52:21Z" finished-at="2017-10-17T16:52:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- com.pageobjectmodel.ddf.testcases.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
